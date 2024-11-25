@@ -23,7 +23,7 @@ export default function ConnectUs() {
       <div className="flex flex-col md:flex-row w-full max-w-4xl gap-8">
         {/* Contact Info */}
         <div className="flex-1 bg-white p-6 shadow-lg rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+          <h2 className="text-2xl text-gray-800 font-semibold mb-4">Contact Information</h2>
           <p className="text-gray-600 mb-4">
             Feel free to reach out via email or follow us on social media.
           </p>
