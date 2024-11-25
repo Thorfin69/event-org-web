@@ -10,20 +10,31 @@ const events = [
   {
     id: 1,
     title: 'Corporate Conference 2023',
-    thumbnail: '/placeholder.svg?height=400&width=600',
-    images: Array(9).fill('/placeholder.svg?height=800&width=1200'),
+    thumbnail: '/assets/corporateEvent/1.jpg',
+    images:[
+      '/assets/corporateEvent/1.jpg',
+      '/assets/corporateEvent/2.jpg',
+      '/assets/corporateEvent/3.jpg',
+    ]
   },
   {
     id: 2,
     title: 'Wedding Celebration',
-    thumbnail: '/placeholder.svg?height=400&width=600',
-    images: Array(9).fill('/placeholder.svg?height=800&width=1200'),
+    thumbnail: '/assets/wedding/1.jpg',
+    images: [
+      '/assets/wedding/1.jpg',
+      '/assets/wedding/2.jpg',
+      '/assets/wedding/3.jpg'
+    ]
   },
   {
     id: 3,
-    title: 'Birthday Gala',
-    thumbnail: '/placeholder.svg?height=400&width=600',
-    images: Array(9).fill('/placeholder.svg?height=800&width=1200'),
+    title: 'Birthday Perty',
+    thumbnail: '/assets/birthdayEvent/1.jpg',
+    images: ['/assets/birthdayEvent/1.jpg',
+      '/assets/birthdayEvent/2.jpg',
+       '/assets/birthdayEvent/3.jpg',
+    ] 
   },
 ]
 
@@ -36,7 +47,7 @@ export default function GalleryPage() {
       {/* Main Gallery Section */}
       <div className="max-w-7xl mx-auto">
         <motion.h1 
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl text-gray-800 font-bold text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -89,13 +100,13 @@ export default function GalleryPage() {
               Back to Events
             </motion.button>
             <motion.h2 
-              className="text-3xl font-bold mb-8"
+              className="text-3xl text-gray-800 font-bold mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
               {selectedEvent.title}
             </motion.h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2  sm:grid-cols-3 gap-4">
               {selectedEvent.images.map((image, index) => (
                 <motion.div
                   key={index}
@@ -131,7 +142,7 @@ export default function GalleryPage() {
               onClick={() => setSelectedImage(null)}
             >
               <motion.button
-                className="absolute top-4 right-4 text-white hover:text-gray-300"
+                className="absolute top-4 right-4  hover:text-gray-300"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >

@@ -23,13 +23,13 @@ export default function Home() {
           className="text-center z-10"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800">
-            Welcome to Your Time Event
+            Welcome to Your  Time Event
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-600">
-            Creating Unforgettable Moments, One Event at a Time
+            Creating Unforgettable Moments,  One Event at a Time
           </p>
           <MotionLink
-            href="/contact"
+            href="/connect"
             className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -89,12 +89,12 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { src: '/placeholder.svg?height=400&width=600', alt: 'Corporate event' },
-              { src: '/placeholder.svg?height=400&width=600', alt: 'Wedding celebration' },
-              { src: '/placeholder.svg?height=400&width=600', alt: 'Birthday party' },
-              { src: '/placeholder.svg?height=400&width=600', alt: 'Product launch' },
-              { src: '/placeholder.svg?height=400&width=600', alt: 'Gala dinner' },
-              { src: '/placeholder.svg?height=400&width=600', alt: 'Team building event' },
+              { src: '/assets/corporateEvent/1.jpg', alt: 'Corporate event' },
+              { src: '/assets/wedding/1.jpg', alt: 'Wedding celebration' },
+              { src: '/assets/birthdayEvent/1.jpg', alt: 'Birthday party 🎉' },
+              // { src: '/placeholder.svg?height=400&width=600', alt: 'Product launch' },
+              // { src: '/placeholder.svg?height=400&width=600', alt: 'Gala dinner' },
+              // { src: '/placeholder.svg?height=400&width=600', alt: 'Team building event' },
             ].map((image, index) => (
               <motion.div
                 key={index}
@@ -103,16 +103,22 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative h-64 overflow-hidden rounded-lg shadow-md group"
               >
+                <Link href="/gallery" passHref >
+               
                 <Image
                   src={image.src}
                   alt={image.alt}
                   layout="fill"
                   objectFit="cover"
                   className="transition-transform duration-300 group-hover:scale-110"
+                  
                 />
+                
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <p className="text-white text-lg font-semibold">{image.alt}</p>
                 </div>
+                
+                </Link>
               </motion.div>
             ))}
           </div>
