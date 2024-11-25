@@ -1,7 +1,4 @@
-// app/connect/page.js (Next.js 15+ with app router)
-
 "use client";
-
 import { useState } from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -51,7 +48,7 @@ export default function ConnectUs() {
 
         {/* Contact Form */}
         <div className="flex-1 bg-white p-6 shadow-lg rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Get In Touch</h2>
+          <h2 className="text-2xl text-gray-900 font-semibold mb-4">Get In Touch</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
               type="text"
