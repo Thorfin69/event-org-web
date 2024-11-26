@@ -57,7 +57,7 @@ export default function ConnectUs() {
               onChange={handleChange}
               placeholder="Your Name"
               required
-              className="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full text-gray-700 p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="email"
@@ -66,7 +66,7 @@ export default function ConnectUs() {
               onChange={handleChange}
               placeholder="Your Email"
               required
-              className="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 text-gray-700 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
             />
             <textarea
               name="message"
@@ -75,7 +75,7 @@ export default function ConnectUs() {
               placeholder="Your Message"
               required
               rows={5}
-              className="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border rounded-lg text-gray-700 outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
             <button
               type="submit"
